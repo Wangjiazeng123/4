@@ -83,7 +83,7 @@ public String readFile() {
 		return message;  
 	}  
 ## 实验结果
-![1](https://github.com/Wangjiazeng123/4/blob/main/01c8cdaf76052cb700aa547f012ceb7.png)
+![1](https://github.com/Wangjiazeng123/4/blob/main/0e50010d656ebde092147b82c9a5623.png)
 ![1](https://github.com/Wangjiazeng123/4/blob/main/e12e3f8c55dfdb7e4e5368b8a5cd3b8.png)
 ## 实验感
 通过这次实验更深一步的体会到了异常处理的使用以及bufferreader与scanner的利弊和区别。激发了对java的兴趣，是我对java逻辑结构更加了解了。
