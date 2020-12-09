@@ -41,50 +41,49 @@
 ### 4.将数据通过import导入测试类
 ## 核心方法
 ### 1.文件的存储
-public String readFile() {
-		String original = null;
-		int n=-1;
-		char[] a = new char[100];//缓存，
-		try {
-			File file = new File("E:\\文本.txt");
-			InputStream fli = new FileInputStream(file);
-			InputStreamReader in = new InputStreamReader(fli, "UTF-8");
-		while((n=in.read(a,0,100))!=-1) {
-		String s = new String(a,0,n);
-		this.n=n;
-		if(original!=null)
-		original = original+s;
-		else original=s;
-		}
-		
-        in.close();
-      	}
-		catch (IOException e) {
-			System.out.println("File read erroe:"+e);
-		}
-		return original;
-	}
+public String readFile() {  
+		String original = null;  
+		int n=-1;  
+		char[] a = new char[100];//缓存，  
+		try {  
+			File file = new File("E:\\文本.txt");  
+			InputStream fli = new FileInputStream(file);  
+			InputStreamReader in = new InputStreamReader(fli, "UTF-8");  
+		while((n=in.read(a,0,100))!=-1) {  
+		String s = new String(a,0,n);  
+		this.n=n;  
+		if(original!=null)  
+		original = original+s;  
+		else original=s;  
+		}	  
+        in.close();  
+      	}  
+		catch (IOException e) {  
+			System.out.println("File read erroe:"+e);  
+		}  
+		return original;  
+	}  
   ### 2.录入系统
-  public void inputInformation() {
-	Scanner reader = new Scanner(System.in);
-	a:for(;;) {
-		try {
-			System.out.println("请输入姓名");
-	        name=reader.nextLine();
-	        System.out.println("录入成功");
-	        break a;
-		}
-		catch(Exception e) {
-			System.out.println("您输入的 “"+name+"” 格式不正确，请重新输入！");
-		}
-	}
+  public void inputInformation() {  
+	Scanner reader = new Scanner(System.in);  
+	a:for(;;) {  
+		try {  
+			System.out.println("请输入姓名");  
+	        name=reader.nextLine();  
+	        System.out.println("录入成功");  
+	        break a;  
+		}  
+		catch(Exception e) {  
+			System.out.println("您输入的 “"+name+"” 格式不正确，请重新输入！");  
+		}  
+	}  
   ### 3.异常处理
-  public String JudgeException(String input) {
-		message = "您输入的“"+input+"”不正确，请输入正确性别！";
-		return message;
-	}
+  public String JudgeException(String input) {  
+		message = "您输入的“"+input+"”不正确，请输入正确性别！";  
+		return message;  
+	}  
 ## 实验结果
 ![1](https://github.com/Wangjiazeng123/4/blob/main/01c8cdaf76052cb700aa547f012ceb7.png)
 ![1](https://github.com/Wangjiazeng123/4/blob/main/e12e3f8c55dfdb7e4e5368b8a5cd3b8.png)
 ## 实验感
-通过这次实验更深一步的体会到了异常处理的使用以及聊记录bufferreader与scanner的利弊和区别。激发了对java的兴趣，是我对java逻辑结构更加了解了。
+通过这次实验更深一步的体会到了异常处理的使用以及bufferreader与scanner的利弊和区别。激发了对java的兴趣，是我对java逻辑结构更加了解了。
