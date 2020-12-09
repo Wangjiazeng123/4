@@ -82,6 +82,36 @@ public String readFile() {
 		message = "您输入的“"+input+"”不正确，请输入正确性别！";  
 		return message;  
 	}  
+### 4.记录重复字数
+while (true) {  
+                System.out.println("输入功能编号:" + "\n" + "1:查询古诗中的字或词"+" \n"+ "2:退出程序"+"\n");  
+                Scanner o = new Scanner(System.in);  
+                int m = o.nextInt();  
+                switch (m) {  
+                    case 1:  
+                        System.out.println("输入你想要查询的字或词");  
+                        Scanner scanner1 = new Scanner(System.in);  
+                        String s1 = scanner1.nextLine();  
+                        Pattern pattern = Pattern.compile(s1);  
+                        Matcher matcher = pattern.matcher(s);  
+                        if (matcher.find()) {  
+                            int num = 1;  
+                            while (matcher.find()) {  
+                                num++;  
+                            }  
+                            System.out.println("次数为" + num);  
+                        } else {  
+                            System.out.println("文本中没有该字符");  
+                        }  
+                        break;  
+                    case 2:  
+                        break a;  
+                    default:  
+                        System.out.println("您输入的编号有误，请重新输入");  
+                }  
+            }  
+
+ }  
 ## 实验结果
 ![1](https://github.com/Wangjiazeng123/4/blob/main/0e50010d656ebde092147b82c9a5623.png)
 ![1](https://github.com/Wangjiazeng123/4/blob/main/e12e3f8c55dfdb7e4e5368b8a5cd3b8.png)
